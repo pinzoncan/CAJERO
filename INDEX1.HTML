@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cajero Automático</title>
+  <link rel="stylesheet" href="ESTILOS.CSS">
+  <script src="CODIGO.JS"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Bienvenido al cajero</h2>
+    <BR>Usuario 1: CUENTA1 CONTRASEÑA: 1234</BR>
+    <BR>Usuario 2: CUENTA2 CONTRASEÑA: 5678</BR>
+    <BR>Usuario 3: CUENTA3 CONTRASEÑA: abcd</BR>
+    <br>
+    <input type="text" id="account" placeholder="Cuenta">
+    <input type="password" id="password" placeholder="Contraseña">
+    <button onclick="authenticate()">Ingresar</button>
+  </div>
+
+  <div class="container" id="menu" style="display: none;">
+    <h2>Opciones</h2>
+    <button onclick="showBalance()">Consultar saldo</button>
+    <button onclick="deposit()">Ingresar monto</button>
+    <button onclick="withdraw()">Retirar monto</button>
+    <button onclick="showTotal()">Saldo total</button>
+  </div>
+
+  <div class="container" id="balance" style="display: none;">
+    <h2>Consulta de saldo</h2>
+    <p id="currentBalance"></p>
+    <button onclick="backToMenu()">Volver</button>
+  </div>
+
+  <div class="container" id="deposit" style="display: none;">
+    <h2>Ingresar monto</h2>
+    <input type="number" id="depositAmount" placeholder="Monto a ingresar">
+    <p id="depositResult"></p>
+    <button onclick="confirmDeposit()">Confirmar</button>
+    <button onclick="backToMenu()">Volver</button>
+  </div>
+
+  <div class="container" id="withdraw" style="display: none;">
+    <h2>Retirar monto</h2>
+    <input type="number" id="withdrawAmount" placeholder="Monto a retirar">
+    <p id="withdrawResult"></p>
+    <button onclick="confirmWithdraw()">Confirmar</button>
+    <button onclick="backToMenu()">Volver</button>
+  </div>
+
+  <div class="container" id="total" style="display: none;">
+    <h2>Saldo total</h2>
+    <p id="totalBalance"></p>
+    <button onclick="backToMenu()">Volver</button>
+  </div>  
+</body>
+</html
